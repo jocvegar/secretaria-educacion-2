@@ -6,11 +6,11 @@ require 'faker'
 # 	)
 # end
 
-teams = Team.create([
-	{name: "Legal"},
-	{name: "Contaduría"},
-	{name: "Licitaciones"},
-	{name: "Ambiental"},
-	{name: "Gerencia"},
-	{name: "Procesos"}
-])
+# teams = Team.create([
+# 	{name: "Legal"},
+# 	{name: "Contaduría"},
+# 	{name: "Licitaciones"},
+# 	{name: "Ambiental"},
+# 	{name: "Gerencia"},
+# 	{name: "Procesos"}
+# ])

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/manifest.json' => "service_worker#manifest"
   get '/offline.html' => "service_worker#offline"
 
-  resources :users, only: [:index, :destroy]
+  resources :users, only: [:index, :edit, :update, :destroy]
   resources :teams
 
 end

@@ -34,7 +34,9 @@
 				<tbody id="userTable">
 					<% @users.each do |user| %>
 						<tr id="user_column_<%= user.slug %>">
-							<th nowrap="nowrap" scope="row"><%= user&.first_name %></th>
+							<th nowrap="nowrap" scope="row">
+								<%= link_to user&.first_name, edit_user_path(user) %>
+							</th>
 							<td><%= user&.last_name %></td>
 							<td>Filler<%#= user.teams&.first&.name ? user&.teams&.first&.name : " - " %></td>
 							<td><%= user&.email %></td>
