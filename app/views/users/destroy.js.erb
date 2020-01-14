@@ -1,4 +1,4 @@
-var row = $('#user_column_<%= @user.id %>')
+var row = $('#user_column_<%= @user.slug %>')
             .children('td')
             .css({ backgroundColor: "red", color: "white" });
 
@@ -10,4 +10,3 @@ setTimeout(function () {
         .slideUp(500, function() { $(this).closest('tr').remove(); });
 	}, 350
 );
-

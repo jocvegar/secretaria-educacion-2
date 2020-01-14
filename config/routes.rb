@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/offline.html' => "service_worker#offline"
 
   resources :users, only: [:index, :destroy]
+  resources :teams
+
 end
