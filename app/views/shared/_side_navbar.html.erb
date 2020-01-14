@@ -8,24 +8,24 @@
 
     <ul class="list-unstyled components">
         <li class="<%= active_class('/packages') %>">
-        	<%#= link_to packages_path do %>
+        	<%= link_to "#" do %>
         		<i class="fas fa-clipboard"></i>
         		Procesos
-        	<%# end %>
+        	<% end %>
         </li>
 
         <li class="<%= active_class('/finished_packages') %>">
-            <%#= link_to finished_packages_path do %>
+            <%= link_to "#" do %>
                 <i class="far fa-check-square"></i>
                 Terminados
-            <%# end %>
+            <% end %>
         </li>
 
         <li class="<%= active_class('/teams') %>">
-        	<%#= link_to teams_path do %>
+        	<%= link_to "#" do %>
         		<i class="fas fa-pencil-ruler"></i>
         		Equipos
-        	<%# end %>
+        	<% end %>
             <!-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 <i class="fas fa-copy"></i>
                 Pages
@@ -43,10 +43,10 @@
             </ul> -->
         </li>
         <li class="<%= active_class('/users') %>">
-        	<%#= link_to users_path do %>
+        	<%= link_to "#" do %>
         		<i class="fas fa-users"></i>
         		Usuarios
-        	<%# end %>
+        	<% end %>
         </li>
     </ul>
 </nav>

@@ -25,7 +25,7 @@
     margin-top: -5px;
   }
 }
-@each $name,$color in (default,#adb5bd),(primary,#2780E3),(success,#3FB618),(danger,#FF0039),(warning,#FF7518),(info,#9954BB), (bdc,#29527a) {
+@each $name,$color in (default,#f7f7f7),(primary,#0275d8),(success,#5cb85c),(danger,#d9534f),(warning,#f0ad4e),(info,#5bc0de), (bdc,#29527a) {
   .callout-#{$name} {
     border-left-color: $color;
     h5 {

@@ -72,8 +72,8 @@ i, span {
   transition: all 0.3s;
 
   &.active {
-    min-width: 80px;
-    max-width: 80px;
+    min-width: 85px;
+    max-width: 85px;
     text-align: center;
 
     .sidebar-header h3, .CTAs {
@@ -267,10 +267,10 @@ a {
 
 @media (max-width: 768px) {
   #sidebar {
-    min-width: 80px;
-    max-width: 80px;
+    min-width: 85px;
+    max-width: 85px;
     text-align: center;
-    margin-left: -80px !important;
+    margin-left: -85px !important;
   }
 
   .dropdown-toggle::after {
