@@ -1,0 +1,13 @@
+var row = $('#user_column_<%= @user.id %>')
+            .children('td')
+            .css({ backgroundColor: "red", color: "white" });
+
+setTimeout(function () {
+        $(row)
+        .animate({ paddingTop: 0, paddingBottom: 0 }, 500)
+        .wrapInner('<div />')
+        .children()
+        .slideUp(500, function() { $(this).closest('tr').remove(); });
+	}, 350
+);
+
