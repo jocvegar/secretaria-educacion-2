@@ -1,0 +1,52 @@
+<nav id="sidebar">
+    <div class="sidebar-header">
+    	<%= link_to root_path do %>
+	    	<h3>Secretaría de Educación</h3>
+	    	<strong>SE</strong>
+    	<% end %>
+    </div>
+
+    <ul class="list-unstyled components">
+        <li class="<%= active_class('/packages') %>">
+        	<%#= link_to packages_path do %>
+        		<i class="fas fa-clipboard"></i>
+        		Procesos
+        	<%# end %>
+        </li>
+
+        <li class="<%= active_class('/finished_packages') %>">
+            <%#= link_to finished_packages_path do %>
+                <i class="far fa-check-square"></i>
+                Terminados
+            <%# end %>
+        </li>
+
+        <li class="<%= active_class('/teams') %>">
+        	<%#= link_to teams_path do %>
+        		<i class="fas fa-pencil-ruler"></i>
+        		Equipos
+        	<%# end %>
+            <!-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-copy"></i>
+                Pages
+            </a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Page 1</a>
+                </li>
+                <li>
+                    <a href="#">Page 2</a>
+                </li>
+                <li>
+                    <a href="#">Page 3</a>
+                </li>
+            </ul> -->
+        </li>
+        <li class="<%= active_class('/users') %>">
+        	<%#= link_to users_path do %>
+        		<i class="fas fa-users"></i>
+        		Usuarios
+        	<%# end %>
+        </li>
+    </ul>
+</nav>

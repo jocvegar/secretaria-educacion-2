@@ -6,7 +6,18 @@
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
+require("jquery");
+require("jquery-ui");
 require("channels")
+require("custom/index")
+require("bootstrap");
+require("custom/chosen_jquery")
+require("custom/chosen_select")
+require("custom/pwa")
+
+import 'jquery-ui-dist/jquery-ui.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../stylesheets/application'
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

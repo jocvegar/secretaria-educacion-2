@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SecretariaEducacion2</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#008080"/>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <title><%= title_helper(yield(:title)) %></title>
 
-  <body>
-    <%= yield %>
-  </body>
+
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <!-- jQuery  -->
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous">
+        </script>
+        <!-- Lighthouse Details -->
+        <link rel="manifest" href="/manifest.json">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <%= render "shared/side_navbar" %>
+            <div id="content">
+                <%= render "shared/top_navbar" %>
+                <%#= flash_messages %>
+                <%= yield %>
+            </div>
+        </div>
+    </body>
 </html>
