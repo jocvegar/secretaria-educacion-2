@@ -55,7 +55,11 @@ class TeamsController < ApplicationController
 	end
 
 	def set_users
-		@users = User.left_outer_joins(:team_memberships).where( team_memberships: { id: nil } ) + @team.users
+		if @team.nil?
+			@users = User.left_outer_joins(:team_memberships).where( team_memberships: { id: nil } )
+		else
+			@users = User.left_outer_joins(:team_memberships).where( team_memberships: { id: nil } ) + @team.users
+		end
 	end
 
 end
