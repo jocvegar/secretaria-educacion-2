@@ -1,0 +1,44 @@
+<%= simple_form_for team do |f| %>
+	<%= f.error_notification %>
+	<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+	<div class="row">
+		<div class="col-12 offset-sm-2 col-sm-8">
+			<%= f.label "Nombre de Equipo" %>
+			<%= f.input :name, label: false, placeholder: "Nombre" %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 offset-sm-2 col-sm-8">
+			<%= f.label "Usuarios" %>
+			<%#= f.association :users, label: false, collection: users.map { |u| [u.username, (u.id)] },
+			input_html: { class: 'add-chosen', data: { placeholder: 'Seleccionar usarios'} },
+			selected: team.users.map(&:slug) %>
+			<select class="form-control is-valid select optional add-chosen"
+				data-placeholder="Seleccionar usarios"
+				multiple="multiple"
+				name="team[user_ids][]"
+				id="team_user_ids">
+
+				<% users.each do |user| %>
+					<% if team.users.include?(user) %>
+						<option value="<%= user.id %>" selected><%= user.username %></option>
+					<% else %>
+						<option value="<%= user.id %>"><%= user.username %></option>
+					<% end %>
+				<% end %>
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-6 col-sm-4 offset-sm-2">
+			<%= link_to back_link, class: "btn btn-secondary btn-block" do %>
+				Regresar
+			<% end %>
+		</div>
+		<div class="col-6 col-sm-4">
+			<%= f.button :submit, "Salvar", class: "btn btn-primary btn-block" %>
+		</div>
+	</div>
+<% end %>
