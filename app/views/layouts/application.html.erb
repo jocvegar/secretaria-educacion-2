@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#008080"/>
+        <meta name="theme-color" content="#0275d8"/>
 
         <title><%= title_helper(yield(:title)) %></title>
 
@@ -23,6 +23,9 @@
         </script>
         <!-- Lighthouse Details -->
         <link rel="manifest" href="/manifest.json">
+
+        <%= favicon_link_tag asset_path('favicon.ico') %>
+
     </head>
 
     <body>
