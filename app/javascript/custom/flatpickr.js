@@ -1,5 +1,5 @@
 var addFlatPickrToClass = function() {
-	flatpickr(".flatpickr", {
+	$(".flatpickr").flatpickr({
 		altInput: true,
 		altFormat: "j F, Y",
 		dateFormat: "Y-m-d",
