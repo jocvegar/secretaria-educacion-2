@@ -8,9 +8,9 @@
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-              <%= link_to "Procesos Activos", "#" %>
+              <%= link_to "Procesos", packages_path %>
             </div>
-            <div class="h5 mb-0 font-weight-bold text-black-50"><%#= @packages.size %> adsf</div>
+            <div class="h5 mb-0 font-weight-bold text-black-50"><%= @package_size %></div>
           </div>
           <div class="col-auto">
             <i class="fas fa-hashtag fa-2x text-muted"></i>
@@ -28,7 +28,9 @@
             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
               <%= link_to "Terminados", "#" %>
             </div>
-            <div class="h5 mb-0 font-weight-bold text-black-50"><%#= @finished_packages.size %> 42</div>
+            <div class="h5 mb-0 font-weight-bold text-black-50">
+              <%= @finished_package_size %>
+            </div>
           </div>
           <div class="col-auto">
             <i class="fas fa-hashtag fa-2x text-muted"></i>

@@ -11,14 +11,20 @@ require("jquery-ui");
 require("channels")
 require("custom/index")
 require("bootstrap");
+require("bootstrap-toggle");
 require("custom/chosen_jquery")
 require("custom/chosen_select")
+require("custom/bootstrap_toggle")
+require("custom/flatpickr")
 require("custom/pwa")
 
 import 'jquery-ui-dist/jquery-ui.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-toggle/css/bootstrap2-toggle.min.css';
 import '../stylesheets/application'
-
+// DatePicker
+import 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -26,3 +32,5 @@ import '../stylesheets/application'
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
