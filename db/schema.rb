@@ -10,25 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_26_233220) do
+ActiveRecord::Schema.define(version: 2020_01_20_195524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "assignments", force: :cascade do |t|
-    t.bigint "team_id", null: false
-    t.bigint "package_id", null: false
-    t.integer "position"
-    t.boolean "started", default: false
-    t.boolean "finished", default: false
-    t.string "comment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "time_unit"
-    t.string "time_type"
-    t.index ["package_id"], name: "index_assignments_on_package_id"
-    t.index ["team_id"], name: "index_assignments_on_team_id"
-  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -87,8 +72,6 @@ ActiveRecord::Schema.define(version: 2020_01_26_233220) do
     t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
-  add_foreign_key "assignments", "packages"
-  add_foreign_key "assignments", "teams"
   add_foreign_key "team_memberships", "teams"
   add_foreign_key "team_memberships", "users"
 end
