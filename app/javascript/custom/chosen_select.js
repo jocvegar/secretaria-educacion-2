@@ -2,7 +2,7 @@ var addChosenToClass = function() {
 	$('.add-chosen').chosen();
 	$('.chosen-select').chosen({
 		allow_single_deselect: true,
-		no_results_text:      'No results matched',
+		no_results_text: 'No results matched',
 		disable_search_threshold: 10
 	});
 };

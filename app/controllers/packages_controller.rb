@@ -10,6 +10,7 @@ class PackagesController < ApplicationController
 
   def new
     @package = Package.new
+    @package.assignments.build
   end
 
   def edit
@@ -59,6 +60,7 @@ class PackagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
-      params.require(:package).permit(:start_date, :finish_date, :title, :publish)
+      params.require(:package).permit(:start_date, :finish_date, :title, :publish,
+        assignments_attributes: [:id, :comment, :time_unit, :time_type, :team_id, :_destroy])
     end
 end

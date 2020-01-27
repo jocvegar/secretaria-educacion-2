@@ -7,8 +7,7 @@ class Team < ApplicationRecord
 	# Association for users as members of a team through team membership
 	has_many :team_memberships, dependent: :destroy
 	has_many :users, through: :team_memberships
-
-	has_many :assignments, dependent: :destroys
+	has_many :assignments, dependent: :destroy
 
 	private
 

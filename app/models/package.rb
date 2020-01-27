@@ -5,7 +5,7 @@ class Package < ApplicationRecord
 	scope :on_going, -> { where(finished: false) }
 	scope :finished, -> { where(finished: true) }
 
-	has_many :assignments, -> { order(position: :asc) }, dependent: :destroy
+	has_many :assignments, -> { order(position: :asc) }, dependent: :destroy, inverse_of: :package
 	accepts_nested_attributes_for :assignments, allow_destroy: true, reject_if: :all_blank
 	has_many :teams, through: :assignments
 

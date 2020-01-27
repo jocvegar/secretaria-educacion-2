@@ -1,0 +1,40 @@
+<div class='nested-fields'>
+    <%= f.hidden_field :_destroy %>
+    <div class="row">
+    	<div class="col-4">
+    		<%= f.label "Seleccionar equipos" %>
+    		<%= f.input :team_id, label: false,
+    			collection: Team.all.map { |team| [team.name, (team.id)] },
+    			input_html: { class: 'add-chosen', :data =>
+    				{ :placeholder => 'Seleccionar equipos'} }  %>
+    	</div>
+    	<div class="col-4">
+    		<%= f.label "Seleccionar tiempo" %>
+    		<%= f.input :time_unit, label: false, collection: 1..100,
+    			input_html: { class: 'add-chosen', :data =>
+    				{ :placeholder => 'Seleccionar tiempo'} }  %>
+    	</div>
+    	<div class="col-4">
+    		<%= f.label "Seleccionar unidad" %>
+    		<% time_collection = [ ["Día", "day"], ["Semana", "week"], ["Año", "year"] ] %>
+			<%= f.input :time_type, label: false,
+				collection: time_collection.each { |tc| [tc[0], (tc[1])] },
+				input_html: { class: 'add-chosen', :data =>
+					{ :placeholder => 'Seleccionar unidad'} } %>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="col-11">
+    		<%= f.input :comment, label: false, placeholder: "Comentario" %>
+    	</div>
+    	<div class="col-1">
+    		<%= link_to "#", data: { action: "nested-form#remove_association" },
+    			class: "faded-red" do %>
+	    		<h4 style="margin-top:6px">
+	    			<i class="fas fa-trash-alt"></i>
+	    		</h4>
+    		<% end %>
+    	</div>
+    </div>
+    <hr>
+</div>
